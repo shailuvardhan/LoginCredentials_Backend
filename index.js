@@ -139,7 +139,7 @@ app.post('/register/', async (request, response) => {
     const dbUser = await db.get(selectUserQuery)
     if (dbUser === undefined) {
       response.status(400)
-      response.send('Invalid User')
+      response.json({ error: 'Invalid User' })
     } else {
   //  SYNTAX:- bcrypt.compare(plainPassword,newPassword)
       const isPasswordMatched = await bcrypt.compare(password, dbUser.password)
@@ -149,7 +149,7 @@ app.post('/register/', async (request, response) => {
         response.send({jwtToken})
       } else {
         response.status(400)
-        response.send('Invalid Password')
+        response.json({ error: 'Invalid Password' })
       }
     }
   })
