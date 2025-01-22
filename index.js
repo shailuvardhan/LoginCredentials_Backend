@@ -106,7 +106,7 @@ app.get("/",(request,response)=>{
 
 
 // User Register API
-app.post('/users/', async (request, response) => {
+app.post('/register/', async (request, response) => {
     const { name,username, password, gender, location} = request.body
     const hashedPassword = await bcrypt.hash(request.body.password, 10)
     const selectUserQuery = `SELECT * FROM Users WHERE username = '${username}'`
