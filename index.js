@@ -117,7 +117,7 @@ app.post('/register/', async (request, response) => {
           Users (id, name, username, password, gender, location) 
         VALUES 
           (
-            '${uuidv4()}'
+            '${uuidv4()}',
             '${name}',
             '${username}', 
             '${hashedPassword}', 
