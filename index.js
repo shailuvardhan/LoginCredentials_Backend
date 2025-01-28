@@ -125,10 +125,10 @@ app.post('/register/', async (request, response) => {
             '${location}'
           )`
       await db.run(createUserQuery)
-      response.send(`User created successfully`)
+      response.send({`User created successfully`})
     } else {
       response.status(400)
-      response.send('User already exists')
+      response.send({error: 'User already exists'})
     }
   })
   
