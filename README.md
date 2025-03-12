@@ -8,7 +8,7 @@
 
 ## Installation
 1. Installing Required packages using - npm install
-2. Packages used:-express,sqlite(open-method),sqlite3,nodemon,uuid.
+2. Packages used:-expressJS,sqLite(open-method),sqlite3,nodemon,uuid.
 
 
 1. Table creation
